@@ -1,8 +1,12 @@
 nav ul{
   text-align: center; /*bewirkt eine mittige textausrichtung */
   margin: 0; /*entfernt standardisierte Aussenabstände */
-
-
+position: fixed;
+z-index: 5;
+top: 0;
+transform: translate(0%, -0%);
+background-color: #ffffff;
+width: 100%;
 }
 
 nav li {
@@ -47,6 +51,7 @@ body {
 #beschreibung {
   width: 65%;
   background:#000000;
+  margin-top: 62px;
 }
 
 #name {
