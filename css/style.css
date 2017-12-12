@@ -322,20 +322,60 @@ footer {
 /*mediaqueries unter 480Pixel - z.B Handy im Hochformat*/
 @media only screen and (max-width: 480px) {
 
-  nav li {
-    display: block;
-    line-height: 0.1em;
-  }
-  ul {
-    pading: 0;
-  }
-  nav {
-    position: relative;
-    width: 100%;
-  }
-  main {
-    padding: 0 auto;
-    text-align: center;
-    width: 100%;
-  }
+  body {
+		margin-top: 59px;
+	}
+
+	nav li {
+		display: block;
+		line-height: 0.1em;
+	}
+
+	ul {
+    transform: translate(0%, 0%);
+    margin: 0;
+    padding: 0;
+    transform: translate(0%, -285px);
+    transition: 1s;
+	}
+
+	ul.active {
+		transform: translate(0%, 58px);
+	}
+
+	.mobile-menu-bar {
+		position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    background-color: #343434;
+    z-index: 200;
+	}
+
+	.hamburger-inner, .hamburger-inner:before, .hamburger-inner:after {
+		background-color: #FFFFFF;
+	}
+
+	#hamburger {
+		display: inline;
+		float: right;
+	}
+
+	#portrait {
+		margin-top: 0px;
+	}
+
+	a.scroll {
+		width: 100%;
+	}
+
+	main {
+		padding: 0;
+	}
+
+	.portfolio-eintrag {
+		margin: 0 auto;
+		text-align: center;
+		width: 100%;
+	}
 }
