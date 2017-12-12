@@ -1,12 +1,16 @@
+* {
+  box-sizing: border-box;
+  }
+
 nav ul{
   text-align: center; /*bewirkt eine mittige textausrichtung */
   margin: 0; /*entfernt standardisierte Aussenabstände */
 position: fixed;
-z-index: 5;
+z-index: 3;
 top: 0;
-transform: translate(0%, -0%);
 background-color: #ffffff;
-width: 100%;
+width: 100vw;
+padding: 0;
 }
 
 nav li {
@@ -27,9 +31,12 @@ nav a {
   text-decoration: none; /*entfernt den Browser-Standard, dass die Links unterschrichen wind */
   font-weight: 620; /*setzt die Schriftdicke auf semi-bold */
 }
+#hamburger {
+  display: none;
+}
 
 body {
-  font-family: Antice Didone
+  font-family: Antice Didone;
 }
 
 #about {
@@ -37,13 +44,14 @@ body {
 }
 
 #portrait {
-  width:45%;
+  width: 45%;
   position: relative;
 }
 #portrait_image{
   background-size: cover;/* sorgt dafür dass das Bild immer das Elternelement komplett ausfüllt */
   background-image: url("../img/McBrian1.jpeg"); /* Gibt die Quelle unseres Bildes an */
   background-position: center; /*bestimmt wie das Bild beim verkleinern positioniert werden soll */
+  position: absolute;
   height: 100%;
   width: 100%;
 }
@@ -132,13 +140,13 @@ main {
 }
 
 #erstes-icon {
-  background: url(../img/skills/icon-ps.svg)50% 50% no-repeat;
+  background: url("../img/skills/icon-ps.svg")50% 50% no-repeat;
 }
 #zweites-icon {
-  background: url(../img/skills/icon-code.svg)50% 50% no-repeat;
+  background: url("../img/skills/icon-code.svg")50% 50% no-repeat;
 }
 #drittes-icon {
-  background: url(../img/skills/icon-ai.svg)50% 50% no-repeat;
+  background: url("../img/skills/icon-ai.svg")50% 50% no-repeat;
 }
 
 /* Sektion CV */
@@ -298,9 +306,11 @@ footer {
     flex-flow: row wrap;
   }
   #beschreibung {
+    margin-top: 0px;
     width: 100%;
   }
   #portrait {
+    margin-top: 65px;
     width: 100%;
     padding-bottom: 56.25%;
   }
@@ -321,7 +331,6 @@ footer {
 
 /*mediaqueries unter 480Pixel - z.B Handy im Hochformat*/
 @media only screen and (max-width: 480px) {
-
   body {
 		margin-top: 59px;
 	}
@@ -340,7 +349,8 @@ footer {
 	}
 
 	ul.active {
-		transform: translate(0%, 58px);
+		transform: translate(0%, 55px);
+    z-index: 199;
 	}
 
 	.mobile-menu-bar {
@@ -356,13 +366,22 @@ footer {
 		background-color: #FFFFFF;
 	}
 
+  #mobile-menu {
+    position: fixed;
+    background-color: #ffffff
+  }
+
+  nav ul {
+    position:inherit;
+  }
+
 	#hamburger {
 		display: inline;
 		float: right;
 	}
 
 	#portrait {
-		margin-top: 0px;
+    z-index: 5;
 	}
 
 	a.scroll {
@@ -371,6 +390,7 @@ footer {
 
 	main {
 		padding: 0;
+    margin-top: -8px;
 	}
 
 	.portfolio-eintrag {
