@@ -1,0 +1,336 @@
+nav ul{
+  text-align: center; /*bewirkt eine mittige textausrichtung */
+  margin: 0; /*entfernt standardisierte Aussenabstände */
+
+
+}
+
+nav li {
+  display: inline; /*entfernt standardisierte Aussenabständer*/
+}
+
+nav a {
+  display: inline-block;
+
+  /* inline-block macht jedes der a-Elemente in der Navigation zu einem Block-Element, sodass sich
+  Aussenabstände und Höhe definieren lassen. display:block würde jeden Navigationspunkt die volle
+  Breite des Elternelements nutzen lassen, somit wäre die Links wieder untereinander, aber mittig. */
+
+  color: #000000; /*Textfarbe innerhalb nav a, kann als HTML Farbcode #123456 oder als eines derKEywords angegeben
+  werden. z.B red, blue, yellow - Liste siehe Links weiter unten.*/
+  font-size: 17px; /*Schriftgrosse*/
+  padding: 25px 15px; /*Innenabstand*/
+  text-decoration: none; /*entfernt den Browser-Standard, dass die Links unterschrichen wind */
+  font-weight: 620; /*setzt die Schriftdicke auf semi-bold */
+}
+
+body {
+  font-family: Antice Didone
+}
+
+#about {
+  display: flex;
+}
+
+#portrait {
+  width:45%;
+  position: relative;
+}
+#portrait_image{
+  background-size: cover;/* sorgt dafür dass das Bild immer das Elternelement komplett ausfüllt */
+  background-image: url("../img/McBrian1.jpeg"); /* Gibt die Quelle unseres Bildes an */
+  background-position: center; /*bestimmt wie das Bild beim verkleinern positioniert werden soll */
+  height: 100%;
+  width: 100%;
+}
+
+#beschreibung {
+  width: 65%;
+  background:#000000;
+}
+
+#name {
+  min-height: 230px;
+  padding: 5%;
+}
+
+#infos {
+  background: #7BB2A8;
+  min-height: 230px;
+  padding: 5%;
+}
+
+body { /*globale Schrifteinstellungen definieren */
+  font-size: 15px;
+  font-family: Helvetica, sans-serif; // Nur installierte Fonts.
+  line-height: 5px;
+}
+
+a{ /*Links global stylen */
+  color: #000000;
+  text-decoration: none;
+}
+
+#beschreibung {
+  color: #FFFFFF;
+}
+
+#beschreibung h1 {
+  color: #ffffff;
+  line height: 100%;
+  text-transform: uppercase;
+    font-family: Didot; // Nur installierte Fonts.
+}
+
+#beschreibung span {
+color: #ffffff;
+font-size: none;
+}
+
+#bio {
+  color: #ffffff;
+}
+
+main {
+  width: 100%;
+}
+
+#wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 5%;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/*Skills Section*/
+
+#wrapper h1 {
+  text-align: center;
+  line-height: 4em;
+    font-size: 45px;
+    font-family: Didot; // Nur installierte Fonts.
+    line-height: 5px;
+
+}
+
+.skills-icons{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#erstes-icon, #zweites-icon, #drittes-icon {
+  height: 300px;
+  width: 33.333%;
+  text-align: center;
+}
+
+#erstes-icon {
+  background: url(../img/skills/icon-ps.svg)50% 50% no-repeat;
+}
+#zweites-icon {
+  background: url(../img/skills/icon-code.svg)50% 50% no-repeat;
+}
+#drittes-icon {
+  background: url(../img/skills/icon-ai.svg)50% 50% no-repeat;
+}
+
+/* Sektion CV */
+
+#cv, #jobs, #ausbildungen{
+  float: left;
+}
+
+.cv-eintrag {
+  width: 100%;
+  float: left;
+}
+
+.cv-eintrag img {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.links p {
+  display: inline-block;
+  padding: 15px;
+  border: 1px solid #efefef;
+}
+
+.links {
+  float: left;
+}
+
+.rechts {
+  width: 80%;
+  vertical-align: top;
+  float: right;
+}
+
+.cv-titel {
+  font-size: 1.2em;
+  line-height: 3em;
+  font-weight: bold;
+}
+
+.cv-beschreibung {
+  border: 1px solid #efefef;
+  padding: 0 15px 15px 15px;
+}
+
+/* Sektion Portfolio */
+#portfolio {
+  float: left;
+}
+
+.portfolio-kacheln{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.portfolio-eintrag{
+  position: relative;
+  width: 33.3333%;
+}
+
+.portfolio-eintrag img{
+  width: 100%;
+  display: block;
+}
+.portfolio-eintrag .arbeit-titel {
+  background: rgba(123, 178, 168, 1);
+  height: 100%;
+  color: white;
+  padding: 45% 0;
+  position: absolute;
+/* Positioniert das Element absolut über dem Elternelement, dieses Element lässt sich nun innerhalb der
+übergeordneten Box frei positionieren */
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  visibility:hidden;
+}
+.portfolio-eintrag:hover .arbeit-titel {
+  visibility:visible;
+}
+
+/*Detailseite1*/
+
+img.img-links {
+  width: 48%;
+  float: left;
+  margin: 0 4% 4% 0;
+}
+img.img-rechts {
+  width: 48%;
+  margin: 0 0 4% 0;
+}
+
+.back {
+  width: 100%;
+  text-align: center;
+  height: 4em;
+}
+
+nav a:hover {
+  color: #7BB2A8;
+  cursor: pointer;
+}
+
+/* Kontaktformular */
+#formular {
+  clear: both;
+}
+
+.Kontaktformular {
+  width: 60%;
+  margin: 0 auto;
+  font-family: Didot; // Nur installierte Fonts.
+}
+
+.form-control, textarea {
+  padding: 1%;
+  width: 85%;
+  margin: 2%;
+}
+
+.absenden {
+  padding: 3%;
+  width: 85%;
+  margin: 2%;
+  background: #7BB2A8;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.absenden:hover {
+  background: #7BB2A8;
+}
+
+#KontaktTitel {
+  margin: 0;
+}
+
+/* footer */
+
+footer {
+  background: #7BB2A8;
+  color: white;
+  padding: 2% 0;
+  margin: 2% 0 0 0;
+  text-align: center;
+}
+
+/*mediaqueries bis 950px*/
+@media only screen and (max-width: 960px) {
+  #about {
+    display: block;
+    flex-flow: row wrap;
+  }
+  #beschreibung {
+    width: 100%;
+  }
+  #portrait {
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+  #erstes-icon, #zweites-icon, #drittes-icon {
+    width: 100%;
+  }
+  section#cv {
+    padding: 0 5%;
+  }
+  .links {
+    width: 100%;
+    text-align: center;
+  }
+  .rechts {
+    width: 100%;
+  }
+}
+
+/*mediaqueries unter 480Pixel - z.B Handy im Hochformat*/
+@media only screen and (max-width: 480px) {
+
+  nav li {
+    display: block;
+    line-height: 0.1em;
+  }
+  ul {
+    pading: 0;
+  }
+  nav {
+    position: relative;
+    width: 100%;
+  }
+  main {
+    padding: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+}
